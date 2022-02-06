@@ -18,6 +18,6 @@ class learnFragment : Fragment() {
     }
 
     companion object {
-        @JvmStatic fun newInstance() = learnFragment().apply {}
+        @JvmStatic fun newInstance() = learnFragment()
     }
 }
