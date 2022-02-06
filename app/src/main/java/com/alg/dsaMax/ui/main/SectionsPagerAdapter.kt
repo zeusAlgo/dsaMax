@@ -31,7 +31,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
             }
 
         }
-        return PlaceholderFragment.newInstance(position + 1)
+//        return PlaceholderFragment.newInstance(position + 1)
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
@@ -40,6 +40,6 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
 
     override fun getCount(): Int {
         // Show 2 total pages.
-        return 2
+        return 3
     }
 }
