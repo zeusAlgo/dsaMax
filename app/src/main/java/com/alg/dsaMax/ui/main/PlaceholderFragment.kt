@@ -14,7 +14,6 @@ import com.alg.dsaMax.databinding.FragmentMainBinding
 class PlaceholderFragment : Fragment() {
     private lateinit var pageViewModel: PageViewModel
     private var _binding: FragmentMainBinding? = null
-
     // Property valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
 
