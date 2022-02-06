@@ -10,7 +10,6 @@ import android.view.MenuItem
 import com.alg.dsaMax.ui.main.SectionsPagerAdapter
 import com.alg.dsaMax.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
