@@ -2,4 +2,6 @@
     <string name="app_name">dsaMax</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="Learn">Learn</string>
+    <string name='Play'>Play</string>
 </resources>
