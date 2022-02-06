@@ -5,9 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.alg.dsaMax.R
 
-private val TAB_TITLES = arrayOf(
-        R.string.Learn, R.string.Play
-)
+private val TAB_TITLES = arrayOf(R.string.Learn, R.string.Play)
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
