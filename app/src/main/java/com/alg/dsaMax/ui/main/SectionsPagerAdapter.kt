@@ -11,18 +11,18 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
-        when (position) {
+        return when (position) {
             0 -> {
-                return learnFragment.newInstance()
+                learnFragment.newInstance()
             }
             1 -> {
-                return playFragment.newInstance()
+                playFragment.newInstance()
             }
             2 -> {
-                return settingsFragment.newInstance()
+                settingsFragment.newInstance()
             }
             else -> {
-                return PlaceholderFragment.newInstance(1)
+                PlaceholderFragment.newInstance(1)
             }
         }
     }
