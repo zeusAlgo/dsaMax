@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.alg.dsaMax.R
 
-private val TAB_TITLES = arrayOf(R.string.Learn, R.string.Play)
+private val TAB_TITLES = arrayOf(R.string.Learn, R.string.Play, R.string.Settings)
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
@@ -16,7 +16,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-        when (position) {
+        return when (position) {
             0 -> {
                 return PlaceholderFragment.newInstance(
                     position + 1)
@@ -30,6 +30,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
                 return learnFragment.newInstance()
             }
 
+            else -> {}
         }
 //        return PlaceholderFragment.newInstance(position + 1)
     }
