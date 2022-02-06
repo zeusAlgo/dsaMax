@@ -9,7 +9,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.alg.dsaMax.R
 import com.alg.dsaMax.databinding.FragmentMainBinding
-
 //  A placeholder fragment containing a simple view.
 class PlaceholderFragment : Fragment() {
     private lateinit var pageViewModel: PageViewModel
