@@ -4,6 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.alg.dsaMax.R
+import com.alg.dsaMax.ui.main.PlaceholderFragment.Companion.newInstance
+
 private val TAB_TITLES = arrayOf(R.string.Learn, R.string.Play, R.string.Settings)
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     : FragmentPagerAdapter(fm) {
@@ -17,9 +19,8 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
                 return playFragment.newInstance()
             }
             2 -> {
-                return learnFragment.newInstance()
+                return settingsFragment.newInstance()
             }
-
             else -> {
                 return PlaceholderFragment.newInstance(1)
             }
