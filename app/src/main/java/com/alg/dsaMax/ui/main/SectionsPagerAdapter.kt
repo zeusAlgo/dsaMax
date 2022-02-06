@@ -6,8 +6,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.alg.dsaMax.R
 
 private val TAB_TITLES = arrayOf(
-        R.string.Learn,
-        R.string.Play
+        R.string.Learn, R.string.Play
 )
 
 /**
