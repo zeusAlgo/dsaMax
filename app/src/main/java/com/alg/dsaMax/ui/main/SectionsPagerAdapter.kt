@@ -14,9 +14,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
                 return learnFragment.newInstance()
             }
             1 -> {
-                return PlaceholderFragment.newInstance(
-                    position + 1
-                )
+                return playFragment.newInstance()
             }
             2 -> {
                 return learnFragment.newInstance()
