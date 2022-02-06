@@ -4,9 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.alg.dsaMax.R
-
 private val TAB_TITLES = arrayOf(R.string.Learn, R.string.Play, R.string.Settings)
-
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
     : FragmentPagerAdapter(fm) {
 
