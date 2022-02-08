@@ -25,6 +25,10 @@ class learnFragment : Fragment() {
         card.setOnClickListener {
             Toast.makeText(context, "Yo", Toast.LENGTH_SHORT).show()
         }
+
+        val ar0 = arrayOf("Hashmap", "")
+        val hashmap : HashMap<Int, Array<Any>> = HashMap()
+
     }
 
     companion object {
