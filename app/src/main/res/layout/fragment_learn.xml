@@ -34,5 +34,4 @@
             tools:layout_editor_absoluteY="96dp"
             tools:visibility="visible" />
     </com.google.android.material.card.MaterialCardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
