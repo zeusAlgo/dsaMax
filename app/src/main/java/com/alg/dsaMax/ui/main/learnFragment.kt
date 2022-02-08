@@ -23,7 +23,7 @@ class learnFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val card = view.findViewById<CardView>(R.id.card0)
-        var cardTV = view.findViewById<TextView>(R.id.cardTV)
+        val cardTV = view.findViewById<TextView>(R.id.cardTV)
 
 
         val hashmap : HashMap<Int, Array<Any>> = HashMap()
@@ -31,9 +31,16 @@ class learnFragment : Fragment() {
             "Traverse a Tree(Graph) Level by Level using a queue to " +
                     "note the nodes on that level.\n")
 
-        cardTV.text = hashmap[0]?.get(0).toString()
+        cardTV.text = hashmap[0]!![0].toString()
         card.setOnClickListener {
-            cardTV.text = hashmap[0]!![1].toString()
+            val txA = hashmap[0]!![0]
+            val txB = hashmap[0]!![1]
+            if (cardTV.text == txA) {
+                cardTV.text = txB.toString()
+            } else {
+                cardTV.text = txA.toString()
+            }
+//            cardTV.text = hashmap[0]!![1].toString()
         }
     }
 
