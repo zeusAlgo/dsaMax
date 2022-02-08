@@ -40,7 +40,6 @@ class learnFragment : Fragment() {
             } else {
                 cardTV.text = txA.toString()
             }
-//            cardTV.text = hashmap[0]!![1].toString()
         }
     }
 
