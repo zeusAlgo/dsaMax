@@ -31,7 +31,7 @@
             tools:layout_conversion_absoluteWidth="100dp"
             tools:layout_editor_absoluteX="28dp"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteY="96dp"
             tools:visibility="visible" />
     </com.google.android.material.card.MaterialCardView>
