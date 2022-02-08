@@ -15,11 +15,8 @@ class learnFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        return inflater.inflate(R.layout.fragment_learn,
-//            container, false)
         val view = inflater.inflate(R.layout.fragment_learn, container, false)
-
-        val cardd = view.findViewById<CardView>(R.id.card0)
+        val card = view.findViewById<CardView>(R.id.card0)
         return view
     }
 
