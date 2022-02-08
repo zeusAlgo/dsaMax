@@ -15,14 +15,15 @@ class learnFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_learn, container, false)
-        val card = view.findViewById<CardView>(R.id.card0)
-        return view
+        return inflater.inflate(R.layout.fragment_learn, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val card = view.findViewById<CardView>(R.id.card0)
+        card.setOnClickListener {
+            
+        }
     }
 
     companion object {
