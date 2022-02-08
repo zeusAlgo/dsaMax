@@ -8,6 +8,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.alg.dsaMax.R
+import kotlin.random.Random
+
 class learnFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,16 +40,16 @@ class learnFragment : Fragment() {
         hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
                 "a data structure until a certain condition is met")
 
-        cardTV.text = hashmap[0]!![0].toString()
+        var rand = Random.nextInt(0, 4)
+        cardTV.text = hashmap[rand]!![0].toString()
         card.setOnClickListener {
-            val txA = hashmap[0]!![0]
-            val txB = hashmap[0]!![1]
+            val txA = hashmap[rand]!![0]
+            val txB = hashmap[rand]!![1]
             if (cardTV.text == txA) {
                 cardTV.text = txB.toString()
             } else {
                 cardTV.text = txA.toString()
             }
-//      TODO: make hmap Indices Mutate. create rand func
         }
     }
 
