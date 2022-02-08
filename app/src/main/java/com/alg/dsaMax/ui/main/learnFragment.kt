@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.alg.dsaMax.R
 class learnFragment : Fragment() {
@@ -22,7 +23,7 @@ class learnFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val card = view.findViewById<CardView>(R.id.card0)
         card.setOnClickListener {
-            
+            Toast.makeText(context, "Yo", Toast.LENGTH_SHORT).show()
         }
     }
 
