@@ -20,12 +20,12 @@ class learnFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_learn, container, false)
 
         val cardd = view.findViewById<CardView>(R.id.card0)
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById(R.id.card0)
-        val card  = view.findViewById(R.id.card0)
+
     }
 
     companion object {
