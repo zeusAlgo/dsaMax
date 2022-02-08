@@ -25,16 +25,16 @@ class learnFragment : Fragment() {
         val card = view.findViewById<CardView>(R.id.card0)
         var cardTV = view.findViewById<TextView>(R.id.cardTV)
 
-        card.setOnClickListener {
-            Toast.makeText(context, "Yo", Toast.LENGTH_SHORT).show()
-        }
+
         val hashmap : HashMap<Int, Array<Any>> = HashMap()
         hashmap[0] = arrayOf("Breadth First Search",
             "Traverse a Tree(Graph) Level by Level using a queue to " +
                     "note the nodes on that level.\n")
 
         cardTV.text = hashmap[0]?.get(0).toString()
-
+        card.setOnClickListener {
+            cardTV.text = hashmap[0]!![1].toString()
+        }
     }
 
     companion object {
