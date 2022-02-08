@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.alg.dsaMax.R
@@ -22,6 +23,8 @@ class learnFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val card = view.findViewById<CardView>(R.id.card0)
+        var cardTV = view.findViewById<TextView>(R.id.cardTV)
+
         card.setOnClickListener {
             Toast.makeText(context, "Yo", Toast.LENGTH_SHORT).show()
         }
@@ -29,7 +32,9 @@ class learnFragment : Fragment() {
         hashmap[0] = arrayOf("Breadth First Search",
             "Traverse a Tree(Graph) Level by Level using a queue to " +
                     "note the nodes on that level.\n")
-        
+
+        cardTV.text = hashmap[0]?.get(0).toString()
+
     }
 
     companion object {

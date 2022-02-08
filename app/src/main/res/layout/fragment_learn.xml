@@ -22,6 +22,7 @@
         app:layout_constraintVertical_bias="0.178">
 
         <TextView
+            android:id="@+id/cardTV"
             android:text="@string/bawwlin"
             android:gravity="center"
             android:layout_width="match_parent"
