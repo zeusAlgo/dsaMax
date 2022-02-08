@@ -35,7 +35,8 @@ class learnFragment : Fragment() {
                 "into 2 until target located")
         hashmap[3] = arrayOf("Bitwise XOR", "Exclusive Logical OR to solve" +
                 "problems pertaining to bit manipulation of integers")
-        hashmap[4] = arrayOf()
+        hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
+                "a data structure until a certain condition is met")
 
         cardTV.text = hashmap[0]!![0].toString()
         card.setOnClickListener {
