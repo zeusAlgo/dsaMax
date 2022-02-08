@@ -25,7 +25,6 @@ class learnFragment : Fragment() {
         val card = view.findViewById<CardView>(R.id.card0)
         val cardTV = view.findViewById<TextView>(R.id.cardTV)
 
-
         val hashmap : HashMap<Int, Array<Any>> = HashMap()
         hashmap[0] = arrayOf("Breadth First Search",
             "Traverse a Tree(Graph) Level by Level using a queue to " +
