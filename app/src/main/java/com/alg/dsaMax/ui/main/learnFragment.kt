@@ -26,8 +26,11 @@ class learnFragment : Fragment() {
             Toast.makeText(context, "Yo", Toast.LENGTH_SHORT).show()
         }
 
-        val ar0 = arrayOf("Hashmap", "")
+        val ar0 = arrayOf("Breadth First Search",
+            "Traverse a Tree(Graph) Level by Level using a queue to " +
+                    "note the nodes on that level.\n")
         val hashmap : HashMap<Int, Array<Any>> = HashMap()
+        hashmap[0] = arrayOf(ar0)
 
     }
 
