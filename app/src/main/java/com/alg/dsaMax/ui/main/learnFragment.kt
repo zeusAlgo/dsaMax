@@ -39,6 +39,7 @@ class learnFragment : Fragment() {
             } else {
                 cardTV.text = txA.toString()
             }
+//      TODO: make hmapIndices Mutate. create rand func
         }
     }
 
