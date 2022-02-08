@@ -29,6 +29,13 @@ class learnFragment : Fragment() {
         hashmap[0] = arrayOf("Breadth First Search",
             "Traverse a Tree(Graph) Level by Level using a queue to " +
                     "note the nodes on that level.\n")
+        hashmap[1] = arrayOf("Depth First Search",
+            "Use recursion or stack for iteration to track parent nodes")
+        hashmap[2] = arrayOf("Binary Search", "Divide Array, Matrix or Linked List" +
+                "into 2 until target located")
+        hashmap[3] = arrayOf("Bitwise XOR", "Exclusive Logical OR to solve" +
+                "problems pertaining to bit manipulation of integers")
+        hashmap[4] = arrayOf()
 
         cardTV.text = hashmap[0]!![0].toString()
         card.setOnClickListener {
@@ -39,7 +46,7 @@ class learnFragment : Fragment() {
             } else {
                 cardTV.text = txA.toString()
             }
-//      TODO: make hmapIndices Mutate. create rand func
+//      TODO: make hmap Indices Mutate. create rand func
         }
     }
 
