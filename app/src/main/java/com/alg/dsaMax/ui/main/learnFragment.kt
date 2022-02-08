@@ -15,10 +15,11 @@ class learnFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_learn,
-            container, false)
+//        return inflater.inflate(R.layout.fragment_learn,
+//            container, false)
+        val view = inflater.inflate(R.layout.fragment_learn, container, false)
 
-        val cardd = view.findViewById(R.id.card0)
+        val cardd = view.findViewById<CardView>(R.id.card0)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
