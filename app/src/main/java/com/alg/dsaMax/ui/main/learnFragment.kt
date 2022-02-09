@@ -40,18 +40,6 @@ class learnFragment : Fragment() {
         hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
                 "a data structure until a certain condition is met")
 
-        val rand = Random.nextInt(0, 4)
-        cardTV.text = hashmap[rand]!![0].toString()
-        card.setOnClickListener {
-            val txA = hashmap[rand]!![0]
-            val txB = hashmap[rand]!![1]
-            if (cardTV.text == txA) {
-                cardTV.text = txB.toString()
-            } else {
-                cardTV.text = txA.toString()
-            }
-        }
-
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
         nxtBtn.setOnClickListener {
