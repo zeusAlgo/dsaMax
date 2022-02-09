@@ -80,7 +80,7 @@ class learnFragment : Fragment() {
 //            card.setOnClickListener { flipCard(cardTv, card, hashmap, key) }
 //
         val len = keyStack.size
-        if (len == 1) {
+        if (len <= 1) {
             toast("Not Allowed")
 
         } else {
