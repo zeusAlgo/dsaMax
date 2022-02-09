@@ -66,8 +66,7 @@ class learnFragment : Fragment() {
         prevBtn.setOnClickListener { prevCard(cardTv, card, hashmap, keyStack) }
     }
 
-    private fun prevCard(cardTv: TextView, card: View,
-                         hashmap: HashMap<Int, Array<Any>>,
+    private fun prevCard(cardTv: TextView, card: View, hashmap: HashMap<Int, Array<Any>>,
                          keyStack: MutableList<Int>) {
 
         if (keyStack.size <= 1) {
@@ -80,8 +79,7 @@ class learnFragment : Fragment() {
             card.setOnClickListener { flipCard(cardTv, card, hashmap, key) }
         }
     }
-    private fun nextCard(cardTv: TextView, card: View,
-                         hashmap: HashMap<Int, Array<Any>>,
+    private fun nextCard(cardTv: TextView, card: View, hashmap: HashMap<Int, Array<Any>>,
                          keyStack: MutableList<Int>) {
         val key = genDistinctCard(hashmap, keyStack)
         cardTv.text = hashmap[key]!![0].toString()
@@ -100,7 +98,7 @@ class learnFragment : Fragment() {
             cardTv.text = txA.toString()
         }
     }
-    
+
     private fun randomInt(hashmap: HashMap<Int, Array<Any>>) : Int {
         return Random.nextInt(0, hashmap.size)
     }
