@@ -48,12 +48,10 @@ class learnFragment : Fragment() {
 
         // TODO: ADD REMAINING STRATS
 
-
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
         nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap) }
         prevBtn.setOnClickListener {
-            //TODO: CREATE STACK TO POP AND PUSH
             val idx = stack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
             card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
