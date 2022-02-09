@@ -49,7 +49,8 @@ class learnFragment : Fragment() {
         stack.add(rand)
 //        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
 //        showArray(stack)
-
+        card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
+        
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
         nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap, stack) }
@@ -83,7 +84,7 @@ class learnFragment : Fragment() {
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
         stack.add(rand)
-        card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
+
 //        showArray(stack)
     }
 
