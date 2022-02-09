@@ -40,6 +40,7 @@ class learnFragment : Fragment() {
                 "a data structure until a certain condition is met")
 
         // TODO: ADD REMAINING STRAITS
+        val stack = emptyArray<Int>()
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
@@ -55,7 +56,7 @@ class learnFragment : Fragment() {
         @JvmStatic fun newInstance() = learnFragment()
     }
 
-    private fun nextCard(tv: TextView, view2: View, hashmap: HashMap<Int, Array<Any>>,) {
+    private fun nextCard(tv: TextView, view2: View, hashmap: HashMap<Int, Array<Any>>) {
         val rand = Random.nextInt(0, 4)
         tv.text = hashmap[rand]!![0].toString()
         view2.setOnClickListener {
@@ -67,5 +68,9 @@ class learnFragment : Fragment() {
                 tv.text = txA.toString()
             }
         }
+    }
+
+    fun randomInt(hashmap: HashMap<Int, Array<Any>>) : Int {
+        return Random.nextInt(0, hashmap.size)
     }
 }
