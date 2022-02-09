@@ -63,7 +63,7 @@ class learnFragment : Fragment() {
     private fun prevCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>,
                          stack: MutableList<Int>) {
-        if (stack.size > 0) {
+        if (stack.size > 1) {
             val idx = stack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
 //                card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
