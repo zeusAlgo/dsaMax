@@ -44,9 +44,7 @@ class learnFragment : Fragment() {
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
-        nxtBtn.setOnClickListener {
-            nextCard(cardTV, card, hashmap)
-        }
+        nxtBtn.setOnClickListener { nextCard(cardTV, card, hashmap) }
         prevBtn.setOnClickListener {
             //TODO: CREATE STACK TO POP AND PUSH
         }
