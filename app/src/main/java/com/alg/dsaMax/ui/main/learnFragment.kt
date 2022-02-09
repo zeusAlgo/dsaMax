@@ -53,7 +53,7 @@ class learnFragment : Fragment() {
         cardTv.text = hashmap[key]!![0].toString()
 
         keyStack.add(key)
-        
+
         card.setOnClickListener { flipCard(cardTv, card, hashmap, key) }
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
@@ -84,9 +84,9 @@ class learnFragment : Fragment() {
     private fun nextCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>,
                          stack: MutableList<Int>) {
-        val rand = randomInt(hashmap)
+//        val rand = randomInt(hashmap)
 
-//        val rand = genDistinctCard(hashmap, stack)
+        val rand = genDistinctCard(hashmap, stack)
         cardTv.text = hashmap[rand]!![0].toString()
         stack.add(rand)
 
