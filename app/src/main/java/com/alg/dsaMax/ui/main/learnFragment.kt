@@ -47,13 +47,11 @@ class learnFragment : Fragment() {
                                 "top k smallest, k largest, k most frequent elements")
         // TODO: ADD REMAINING STRATS
 
-        val keyStack = mutableListOf<Int>()
-
         val key = randomInt(hashmap)
-        cardTv.text = hashmap[key]!![0].toString()
-
+        val keyStack = mutableListOf<Int>()
         keyStack.add(key)
 
+        cardTv.text = hashmap[key]!![0].toString()
         card.setOnClickListener { flipCard(cardTv, card, hashmap, key) }
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
