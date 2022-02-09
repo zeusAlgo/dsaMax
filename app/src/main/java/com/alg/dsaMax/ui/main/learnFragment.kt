@@ -118,8 +118,8 @@ class learnFragment : Fragment() {
             genDistinctCard(hashmap, stack)
         } else {
             rand = randomInt(hashmap)
-            return rand
         }
+        return rand
     }
 
     private fun toast(message: String) {
