@@ -1,17 +1,12 @@
 package com.alg.dsaMax.ui.main
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.constraintlayout.motion.widget.OnSwipe
-import androidx.core.view.MotionEventCompat
 import com.alg.dsaMax.R
 import kotlin.random.Random
 
@@ -60,7 +55,7 @@ class learnFragment : Fragment() {
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
         nxtBtn.setOnClickListener {
-
+            nextCard(cardTV, card, hashmap)
         }
     }
 
@@ -68,7 +63,7 @@ class learnFragment : Fragment() {
         @JvmStatic fun newInstance() = learnFragment()
     }
 
-    fun nextCard(tv : TextView, view2 : View, hashmap : HashMap<Int, String>,) {
+    fun nextCard(tv: TextView, view2: View, hashmap: HashMap<Int, Array<Any>>,) {
         var rand = Random.nextInt(0, 4)
         tv.text = hashmap[rand]!![0].toString()
         view2.setOnClickListener {
