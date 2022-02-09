@@ -49,13 +49,13 @@ class learnFragment : Fragment() {
 
         val keyStack = mutableListOf<Int>()
 
-        val rand = randomInt(hashmap)
-        cardTv.text = hashmap[rand]!![0].toString()
+        val key = randomInt(hashmap)
+        cardTv.text = hashmap[key]!![0].toString()
 
-        keyStack.add(rand)
+        keyStack.add(key)
 //        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
 //        showArray(stack)
-        card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
+        card.setOnClickListener { flipCard(cardTv, card, hashmap, key) }
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
