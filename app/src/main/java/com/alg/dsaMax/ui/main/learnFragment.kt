@@ -79,7 +79,6 @@ class learnFragment : Fragment() {
             toast(stack.toString())
 
             card.setOnClickListener { flipCard(cardTv, card, hashmap, idx) }
-//                showArray(stack)
         } else {
             toast("Not Allowed")
         }
@@ -94,7 +93,6 @@ class learnFragment : Fragment() {
 
         toast(stack.toString())
         card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
-//        showArray(stack)
     }
 
     private fun flipCard(cardTv: TextView, card: View,
