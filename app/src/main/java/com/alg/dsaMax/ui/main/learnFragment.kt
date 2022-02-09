@@ -38,11 +38,15 @@ class learnFragment : Fragment() {
                 "problems pertaining to bit manipulation of integers")
         hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
                 "a data structure until a certain condition is met")
+// TODO: ADD REMAINING STRATS
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
         nxtBtn.setOnClickListener {
             nextCard(cardTV, card, hashmap)
+        }
+        prevBtn.setOnClickListener {
+            //TODO: CREATE STACK TO POP AND PUSH
         }
     }
 
