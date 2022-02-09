@@ -68,10 +68,10 @@ class learnFragment : Fragment() {
         @JvmStatic fun newInstance() = learnFragment()
     }
 
-    fun nextCard(tv : TextView, view2 : View, hashmap : HashMap<String, String>,) {
+    fun nextCard(tv : TextView, view2 : View, hashmap : HashMap<Int, String>,) {
         var rand = Random.nextInt(0, 4)
         tv.text = hashmap[rand]!![0].toString()
-        card.setOnClickListener {
+        view2.setOnClickListener {
             val txA = hashmap[rand]!![0]
             val txB = hashmap[rand]!![1]
             if (cardTV.text == txA) {
