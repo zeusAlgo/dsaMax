@@ -74,8 +74,7 @@ class learnFragment : Fragment() {
                          hashmap: HashMap<Int, Array<Any>>,
                          keyStack: MutableList<Int>) {
 
-        val len = keyStack.size
-        if (len <= 1) {
+        if (keyStack.size <= 1) {
             toast("Not Allowed")
         } else {
             keyStack.removeLast()
