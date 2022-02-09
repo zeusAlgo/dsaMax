@@ -69,7 +69,7 @@ class learnFragment : Fragment() {
 //                card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
 //                showArray(stack)
         } else {
-            println("Empty")
+            println("Not allowed")
         }
     }
     private fun nextCard(cardTv: TextView, card: View,
