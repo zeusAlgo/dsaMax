@@ -79,7 +79,6 @@ class learnFragment : Fragment() {
             val key = keyStack.last()
             cardTv.text = hashmap[key]!![0].toString()
 
-            toast(keyStack.toString())
             card.setOnClickListener { flipCard(cardTv, card, hashmap, key) }
         }
     }
@@ -92,7 +91,6 @@ class learnFragment : Fragment() {
         cardTv.text = hashmap[rand]!![0].toString()
         stack.add(rand)
 
-        toast(stack.toString())
         card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
     }
 
