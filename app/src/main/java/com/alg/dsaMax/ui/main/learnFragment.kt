@@ -71,17 +71,26 @@ class learnFragment : Fragment() {
                          hashmap: HashMap<Int, Array<Any>>,
                          keyStack: MutableList<Int>) {
         if (keyStack.size == 1) {
-            toast("Not Allowed")
-
-        } else if (keyStack.size > 1){
-            val idx = keyStack.removeLast()
-            cardTv.text = hashmap[idx]!![0].toString()
+            toast("Nope")
+        } else {
+            val key = keyStack.last()
+            cardTv.text = hashmap[key]!![0].toString()
 
             toast(keyStack.toString())
             card.setOnClickListener { flipCard(cardTv, card, hashmap, idx) }
-        } else {
-            toast("Not Allowed")
         }
+//        if (keyStack.size == 1) {
+//            toast("Not Allowed")
+//
+//        } else if (keyStack.size > 1){
+//            val idx = keyStack.removeLast()
+//            cardTv.text = hashmap[idx]!![0].toString()
+//
+//            toast(keyStack.toString())
+//            card.setOnClickListener { flipCard(cardTv, card, hashmap, idx) }
+//        } else {
+//            toast("Not Allowed")
+//        }
     }
     private fun nextCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>,
