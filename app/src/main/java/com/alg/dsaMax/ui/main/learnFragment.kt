@@ -43,8 +43,9 @@ class learnFragment : Fragment() {
 
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
+
         stack.add(rand)
-        
+
         // TODO: ADD REMAINING STRATS
 
 
@@ -53,6 +54,8 @@ class learnFragment : Fragment() {
         nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap) }
         prevBtn.setOnClickListener {
             //TODO: CREATE STACK TO POP AND PUSH
+            val idx = stack.removeLast()
+            cardTv.text = hashmap[idx]!![0].toString()
         }
     }
 
@@ -65,16 +68,20 @@ class learnFragment : Fragment() {
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
         card.setOnClickListener {
-            val txA = hashmap[rand]!![0]
-            val txB = hashmap[rand]!![1]
-            if (cardTv.text == txA) {
-                cardTv.text = txB.toString()
-            } else {
-                cardTv.text = txA.toString()
-            }
+            flipCard(cardTv, card, hashmap, rand)
         }
     }
 
+    private fun flipCard(cardTv: TextView, card: View,
+                         hashmap: HashMap<Int, Array<Any>>, rand: Int) {
+        val txA = hashmap[rand]!![0]
+        val txB = hashmap[rand]!![1]
+        if (cardTv.text == txA) {
+            cardTv.text = txB.toString()
+        } else {
+            cardTv.text = txA.toString()
+        }
+    }
     private fun randomInt(hashmap: HashMap<Int, Array<Any>>) : Int {
         return Random.nextInt(0, hashmap.size)
     }
