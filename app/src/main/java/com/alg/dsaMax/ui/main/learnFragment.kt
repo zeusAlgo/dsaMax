@@ -45,7 +45,12 @@ class learnFragment : Fragment() {
                                 + "or combinations in a set")
         hashmap[7] = arrayOf("Top 'K' Elements", "Use heap to locate top k, " +
                                 "top k smallest, k largest, k most frequent elements")
-//        hashmap[]
+        hashmap[8] = arrayOf("Sliding Window", "Fixed or Dynamic Window performs operations"
+                             + " on an array, linked list, or string to find longest, shortest"
+                             + " subarray or desired value")
+        hashmap[9] = arrayOf("Fast & Slow Pointers", "Hare and Tortoise Algorithm whereby"
+                             + "one pointer is faster than the other slow pointer.")
+        hashmap[10] = arrayOf()
         // TODO: ADD REMAINING STRATS
 
         val key = randomInt(hashmap)
@@ -108,10 +113,11 @@ class learnFragment : Fragment() {
     private fun genDistinctCard(hashmap: HashMap<Int, Array<Any>>,
                                 keyStack: MutableList<Int>): Int {
         val rand = randomInt(hashmap)
-        if (rand == keyStack.last()) {
+        return if (rand == keyStack.last()) {
             genDistinctCard(hashmap, keyStack)
+        } else {
+            return rand
         }
-        return rand
     }
 
     private fun toast(message: String) {
