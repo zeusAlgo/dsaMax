@@ -34,17 +34,17 @@ class learnFragment : Fragment() {
         hashmap[1] = arrayOf("Depth First Search",
             "Use recursion or stack for iteration to track parent nodes")
         hashmap[2] = arrayOf("Binary Search", "Divide Array, Matrix or Linked List" +
-                "into 2 until target located")
+                " into 2 until target located")
         hashmap[3] = arrayOf("Bitwise XOR", "Exclusive Logical OR to solve" +
-                "problems pertaining to bit manipulation of integers")
-        hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
-                "a data structure until a certain condition is met")
+                " problems pertaining to bit manipulation of integers")
+        hashmap[4] = arrayOf("2 Pointers", " Dual Pointers to iterate through" +
+                " a data structure until a certain condition is met")
         hashmap[5] = arrayOf("2 Heaps", "Desire to know smallest & largest elements" +
                         "in a set")
         hashmap[6] = arrayOf("Subsets", "Use DFS to find all permutations"
                                 + "or combinations in a set")
         hashmap[7] = arrayOf("Top 'K' Elements", "Use heap to locate top k, " +
-                                "top k smallest, k largest, k most frequent elements")
+                                " k smallest, k largest, k most frequent elements")
         hashmap[8] = arrayOf("Sliding Window", "Fixed or Dynamic Window performs operations"
                              + " on an array, linked list, or string to find longest, shortest"
                              + " subarray or desired value")
