@@ -77,7 +77,7 @@ class learnFragment : Fragment() {
             val idx = stack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
             toast(stack.toString())
-
+            
             card.setOnClickListener { flipCard(cardTv, card, hashmap, idx) }
 //                showArray(stack)
         } else {
@@ -88,7 +88,10 @@ class learnFragment : Fragment() {
                          hashmap: HashMap<Int, Array<Any>>,
                          stack: MutableList<Int>) {
 
-        val rand = randomInt(hashmap)
+        var rand = randomInt(hashmap)
+        if (rand == stack.last()) {
+            rand = randomInt(hashmap)
+        }
         cardTv.text = hashmap[rand]!![0].toString()
         stack.add(rand)
 
