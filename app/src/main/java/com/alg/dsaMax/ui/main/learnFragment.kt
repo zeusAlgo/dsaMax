@@ -45,6 +45,7 @@ class learnFragment : Fragment() {
                                 + "or combinations in a set")
         hashmap[7] = arrayOf("Top 'K' Elements", "Use heap to locate top k, " +
                                 "top k smallest, k largest, k most frequent elements")
+        hashmap[]
         // TODO: ADD REMAINING STRATS
 
         val key = randomInt(hashmap)
@@ -92,9 +93,9 @@ class learnFragment : Fragment() {
     }
 
     private fun flipCard(cardTv: TextView, card: View,
-                         hashmap: HashMap<Int, Array<Any>>, rand: Int) {
-        val txA = hashmap[rand]!![0]
-        val txB = hashmap[rand]!![1]
+                         hashmap: HashMap<Int, Array<Any>>, key: Int) {
+        val txA = hashmap[key]!![0]
+        val txB = hashmap[key]!![1]
         if (cardTv.text == txA) {
             cardTv.text = txB.toString()
         } else {
