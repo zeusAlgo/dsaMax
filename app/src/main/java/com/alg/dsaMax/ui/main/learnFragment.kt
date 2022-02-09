@@ -84,8 +84,9 @@ class learnFragment : Fragment() {
             toast("Not Allowed")
 
         } else {
-            val idx = keyStack.removeLast()
-            cardTv.text = hashmap[idx]!![0].toString()
+            keyStack.removeLast()
+            val key = keyStack.last()
+            cardTv.text = hashmap[key]!![0].toString()
 
             toast(keyStack.toString())
             card.setOnClickListener { flipCard(cardTv, card, hashmap, idx) }
