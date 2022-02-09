@@ -40,7 +40,7 @@ class learnFragment : Fragment() {
         hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
                 "a data structure until a certain condition is met")
 
-        var rand = Random.nextInt(0, 4)
+        val rand = Random.nextInt(0, 4)
         cardTV.text = hashmap[rand]!![0].toString()
         card.setOnClickListener {
             val txA = hashmap[rand]!![0]
