@@ -44,7 +44,7 @@ class learnFragment : Fragment() {
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
 
-        stack.add(rand)
+        stack += rand
 
         // TODO: ADD REMAINING STRATS
 
