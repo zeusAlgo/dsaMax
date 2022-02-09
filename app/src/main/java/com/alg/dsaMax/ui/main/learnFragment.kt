@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.alg.dsaMax.R
 import kotlin.random.Random
@@ -38,6 +39,7 @@ class learnFragment : Fragment() {
                 "problems pertaining to bit manipulation of integers")
         hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
                 "a data structure until a certain condition is met")
+        // TODO: ADD REMAINING STRATS
 
         val stack = mutableListOf<Int>()
 
@@ -45,9 +47,8 @@ class learnFragment : Fragment() {
         cardTv.text = hashmap[rand]!![0].toString()
 
         stack += rand
-
-        // TODO: ADD REMAINING STRATS
-
+        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
+        
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
         nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap, stack) }
