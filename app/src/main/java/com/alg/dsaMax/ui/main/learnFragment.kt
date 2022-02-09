@@ -59,9 +59,26 @@ class learnFragment : Fragment() {
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
+        nxtBtn.setOnClickListener {
+
+        }
     }
 
     companion object {
         @JvmStatic fun newInstance() = learnFragment()
+    }
+
+    fun nextCard(tv : TextView, view2 : View, hashmap : HashMap<String, String>,) {
+        var rand = Random.nextInt(0, 4)
+        tv.text = hashmap[rand]!![0].toString()
+        card.setOnClickListener {
+            val txA = hashmap[rand]!![0]
+            val txB = hashmap[rand]!![1]
+            if (cardTV.text == txA) {
+                cardTV.text = txB.toString()
+            } else {
+                cardTV.text = txA.toString()
+            }
+        }
     }
 }
