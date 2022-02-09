@@ -53,22 +53,25 @@ class learnFragment : Fragment() {
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
         nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap, stack) }
-        prevBtn.setOnClickListener {
-            if (stack.size == 1) {
-
-            } else {
-                val idx = stack.removeLast()
-                cardTv.text = hashmap[idx]!![0].toString()
-//                card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
-//                showArray(stack)
-            }
-        }
+        prevBtn.setOnClickListener { prevCard(cardTv, card, hashmap, stack) }
     }
 
     companion object {
         @JvmStatic fun newInstance() = learnFragment()
     }
 
+    private fun prevCard(cardTv: TextView, card: View,
+                         hashmap: HashMap<Int, Array<Any>>,
+                         stack: MutableList<Int>) {
+        if (stack.size == 1) {
+
+        } else {
+            val idx = stack.removeLast()
+            cardTv.text = hashmap[idx]!![0].toString()
+//                card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
+//                showArray(stack)
+        }
+    }
     private fun nextCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>,
                          stack: MutableList<Int>) {
