@@ -111,12 +111,11 @@ class learnFragment : Fragment() {
         return Random.nextInt(0, hashmap.size)
     }
 
-    private fun genDistinctCard(cardTv: TextView, card: View,
-                                hashmap: HashMap<Int, Array<Any>>,
+    private fun genDistinctCard(hashmap: HashMap<Int, Array<Any>>,
                                 stack: MutableList<Int>) : Int {
         var rand = randomInt(hashmap)
         if (rand == stack.last()) {
-            genDistinctCard(cardTv, card, hashmap, stack)
+            genDistinctCard(hashmap, stack)
         } else {
             rand = randomInt(hashmap)
             return rand
