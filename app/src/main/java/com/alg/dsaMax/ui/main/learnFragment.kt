@@ -84,7 +84,6 @@ class learnFragment : Fragment() {
                          hashmap: HashMap<Int, Array<Any>>,
                          keyStack: MutableList<Int>) {
 //        val rand = randomInt(hashmap)
-
         val rand = genDistinctCard(hashmap, keyStack)
         cardTv.text = hashmap[rand]!![0].toString()
         keyStack.add(rand)
@@ -111,8 +110,6 @@ class learnFragment : Fragment() {
         val rand = randomInt(hashmap)
         if (rand == keyStack.last()) {
             genDistinctCard(hashmap, keyStack)
-        } else {
-            return rand
         }
         return rand
     }
