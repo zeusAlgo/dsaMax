@@ -74,11 +74,11 @@ class learnFragment : Fragment() {
         view2.setOnClickListener {
             val txA = hashmap[rand]!![0]
             val txB = hashmap[rand]!![1]
-            if (tv.text == txA) {
-                tv.text = txB.toString()
-            } else {
-                tv.text = txA.toString()
-            }
+//            if (tv.text == txA) {
+//                tv.text = txB.toString()
+//            } else {
+//                tv.text = txA.toString()
+//            }
         }
     }
 }
