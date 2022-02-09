@@ -88,8 +88,8 @@ class learnFragment : Fragment() {
     private fun nextCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>,
                          keyStack: MutableList<Int>) {
-//        val rand = randomInt(hashmap)
-        val rand = genDistinctCard(hashmap, keyStack)
+        val rand = randomInt(hashmap)
+//        val rand = genDistinctCard(hashmap, keyStack)
         cardTv.text = hashmap[rand]!![0].toString()
         keyStack.add(rand)
 
