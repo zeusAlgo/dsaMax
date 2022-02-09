@@ -64,15 +64,16 @@ class learnFragment : Fragment() {
                          hashmap: HashMap<Int, Array<Any>>,
                          stack: MutableList<Int>) {
         if (stack.size == 1) {
-            println("Not allowed")
+            toast("Not Allowed")
 
         } else if (stack.size > 1){
+            toast(stack.toString())
             val idx = stack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
 //                card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
 //                showArray(stack)
         } else {
-            println("Not allowed")
+            toast("Not Allowed")
         }
     }
     private fun nextCard(cardTv: TextView, card: View,
@@ -100,7 +101,7 @@ class learnFragment : Fragment() {
         return Random.nextInt(0, hashmap.size)
     }
 
-    private fun showArray(stack: MutableList<Int>) {
-        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
+    private fun toast(message: String) {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 }
