@@ -54,12 +54,14 @@ class learnFragment : Fragment() {
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
         nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap, stack) }
         prevBtn.setOnClickListener {
+            if (stack.size == 1) {
 
-            val idx = stack.removeLastOrNull()
-            cardTv.text = hashmap[idx]!![0].toString()
-            card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
-            showArray(stack)
-
+            } else {
+                val idx = stack.removeLast()
+                cardTv.text = hashmap[idx]!![0].toString()
+                card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
+                showArray(stack)
+            }
         }
     }
 
