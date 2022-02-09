@@ -76,7 +76,7 @@ class learnFragment : Fragment() {
         } else if (stack.size > 1){
             val idx = stack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
-            
+
             toast(stack.toString())
             card.setOnClickListener { flipCard(cardTv, card, hashmap, idx) }
         } else {
@@ -111,11 +111,9 @@ class learnFragment : Fragment() {
 
     private fun genDistinctCard(hashmap: HashMap<Int, Array<Any>>,
                                 stack: MutableList<Int>) : Int {
-        var rand = randomInt(hashmap)
+        val rand = randomInt(hashmap)
         if (rand == stack.last()) {
             genDistinctCard(hashmap, stack)
-        } else {
-            rand = randomInt(hashmap)
         }
         return rand
     }
