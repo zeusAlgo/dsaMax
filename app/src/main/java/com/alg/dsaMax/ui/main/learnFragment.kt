@@ -71,7 +71,7 @@ class learnFragment : Fragment() {
         }
     }
 
-    fun randomInt(hashmap: HashMap<Int, Array<Any>>) : Int {
+    private fun randomInt(hashmap: HashMap<Int, Array<Any>>) : Int {
         return Random.nextInt(0, hashmap.size)
     }
 }
