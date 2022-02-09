@@ -39,6 +39,12 @@ class learnFragment : Fragment() {
                 "problems pertaining to bit manipulation of integers")
         hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
                 "a data structure until a certain condition is met")
+        hashmap[5] = arrayOf("2 Heaps", "Desire to know smallest & largest elements" +
+                        "in a set")
+        hashmap[6] = arrayOf("Subsets", "Use DFS to find all permutations"
+                                + "or combinations in a set")
+        hashmap[7] = arrayOf("Top 'K' Elements", "Use heap to locate top k, " +
+                                "top k smallest, k largest, k most frequent elements")
         // TODO: ADD REMAINING STRATS
 
         val stack = mutableListOf<Int>()
