@@ -39,11 +39,14 @@ class learnFragment : Fragment() {
         hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
                 "a data structure until a certain condition is met")
 
+        val stack = mutableListOf<Int>()
+
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
-
+        stack.add(rand)
+        
         // TODO: ADD REMAINING STRATS
-        val stack = emptyArray<Int>()
+
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
