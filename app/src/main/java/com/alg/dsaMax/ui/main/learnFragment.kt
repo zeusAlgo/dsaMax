@@ -50,7 +50,7 @@ class learnFragment : Fragment() {
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
-        nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap) }
+        nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap, stack) }
         prevBtn.setOnClickListener {
             val idx = stack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
