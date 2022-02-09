@@ -47,20 +47,20 @@ class learnFragment : Fragment() {
                                 "top k smallest, k largest, k most frequent elements")
         // TODO: ADD REMAINING STRATS
 
-        val stack = mutableListOf<Int>()
+        val keyStack = mutableListOf<Int>()
 
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
 
-        stack.add(rand)
+        keyStack.add(rand)
 //        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
 //        showArray(stack)
         card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
-        nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap, stack) }
-        prevBtn.setOnClickListener { prevCard(cardTv, card, hashmap, stack) }
+        nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap, keyStack) }
+        prevBtn.setOnClickListener { prevCard(cardTv, card, hashmap, keyStack) }
     }
 
     companion object {
