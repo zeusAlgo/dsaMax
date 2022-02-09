@@ -82,7 +82,6 @@ class learnFragment : Fragment() {
             toast(keyStack.toString())
             card.setOnClickListener { flipCard(cardTv, card, hashmap, key) }
         }
-
     }
     private fun nextCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>,
