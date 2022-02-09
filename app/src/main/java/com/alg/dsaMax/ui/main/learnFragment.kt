@@ -25,7 +25,7 @@ class learnFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val card = view.findViewById<CardView>(R.id.card0)
-        val cardTV = view.findViewById<TextView>(R.id.cardTV)
+        val cardTv = view.findViewById<TextView>(R.id.cardTV)
         val hashmap : HashMap<Int, Array<Any>> = HashMap()
         hashmap[0] = arrayOf("Breadth First Search",
             "Traverse a Tree(Graph) Level by Level using a queue to " +
@@ -39,12 +39,15 @@ class learnFragment : Fragment() {
         hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
                 "a data structure until a certain condition is met")
 
+        val rand = randomInt(hashmap)
+        cardTv.text = hashmap[rand]!![0].toString()
+
         // TODO: ADD REMAINING STRATS
         val stack = emptyArray<Int>()
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
-        nxtBtn.setOnClickListener { nextCard(cardTV, card, hashmap) }
+        nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap) }
         prevBtn.setOnClickListener {
             //TODO: CREATE STACK TO POP AND PUSH
         }
