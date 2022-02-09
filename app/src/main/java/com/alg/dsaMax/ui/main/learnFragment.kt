@@ -57,17 +57,17 @@ class learnFragment : Fragment() {
         @JvmStatic fun newInstance() = learnFragment()
     }
 
-    private fun nextCard(tv: TextView, card: View,
+    private fun nextCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>) {
         val rand = randomInt(hashmap)
-        tv.text = hashmap[rand]!![0].toString()
+        cardTv.text = hashmap[rand]!![0].toString()
         card.setOnClickListener {
             val txA = hashmap[rand]!![0]
             val txB = hashmap[rand]!![1]
-            if (tv.text == txA) {
-                tv.text = txB.toString()
+            if (cardTv.text == txA) {
+                cardTv.text = txB.toString()
             } else {
-                tv.text = txA.toString()
+                cardTv.text = txA.toString()
             }
         }
     }
