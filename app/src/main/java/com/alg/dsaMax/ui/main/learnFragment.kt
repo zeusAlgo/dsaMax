@@ -67,7 +67,7 @@ class learnFragment : Fragment() {
                          stack: MutableList<Int>) {
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
-        stack.add(rand)
+        stack += rand
         card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
     }
 
