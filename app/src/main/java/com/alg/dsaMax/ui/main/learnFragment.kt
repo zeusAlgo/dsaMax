@@ -116,6 +116,6 @@ class learnFragment : Fragment() {
     private fun toast(message: String) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
-    
+
     companion object { @JvmStatic fun newInstance() = learnFragment() }
 }
