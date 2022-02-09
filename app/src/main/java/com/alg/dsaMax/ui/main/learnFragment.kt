@@ -50,7 +50,7 @@ class learnFragment : Fragment() {
 //        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
 //        showArray(stack)
         card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
-        
+
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
         val prevBtn = view.findViewById<Button>(R.id.prevBtn)
         nxtBtn.setOnClickListener { nextCard(cardTv, card, hashmap, stack) }
@@ -68,9 +68,10 @@ class learnFragment : Fragment() {
             toast("Not Allowed")
 
         } else if (stack.size > 1){
-            toast(stack.toString())
             val idx = stack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
+            toast(stack.toString())
+
 //                card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
 //                showArray(stack)
         } else {
@@ -85,6 +86,7 @@ class learnFragment : Fragment() {
         cardTv.text = hashmap[rand]!![0].toString()
         stack.add(rand)
 
+        toast(stack.toString())
 //        showArray(stack)
     }
 
