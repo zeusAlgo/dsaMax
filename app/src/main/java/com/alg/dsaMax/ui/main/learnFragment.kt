@@ -45,7 +45,7 @@ class learnFragment : Fragment() {
                                 + "or combinations in a set")
         hashmap[7] = arrayOf("Top 'K' Elements", "Use heap to locate top k, " +
                                 "top k smallest, k largest, k most frequent elements")
-        hashmap[]
+//        hashmap[]
         // TODO: ADD REMAINING STRATS
 
         val key = randomInt(hashmap)
