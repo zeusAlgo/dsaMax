@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
@@ -56,34 +57,8 @@ class learnFragment : Fragment() {
             }
         }
 
-//        card.setOnTouchListener {view, event ->
-//            fun onTouchEvent(view: View, event: MotionEvent): Boolean {
-//
-//                val action: Int = MotionEventCompat.getActionMasked(event)
-//
-//                return when (action) {
-//                    MotionEvent.ACTION_DOWN -> {
-//                        Toast.makeText(context, "yo", Toast.LENGTH_SHORT)
-//                        true
-//                    }
-//                    MotionEvent.ACTION_MOVE -> {
-//                        true
-//                    }
-//                    MotionEvent.ACTION_UP -> {
-//                        true
-//                    }
-//                    MotionEvent.ACTION_CANCEL -> {
-//                        true
-//                    }
-//                    MotionEvent.ACTION_OUTSIDE -> {
-//                        true
-//                    }
-//                    else -> {return true}
-//                }
-//            }
-//
-//            true
-//        }
+        val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
+        val prevBtn = view.findViewById<Button>(R.id.prevBtn)
     }
 
     companion object {
