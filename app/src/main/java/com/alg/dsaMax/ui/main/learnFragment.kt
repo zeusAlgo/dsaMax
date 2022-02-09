@@ -63,12 +63,12 @@ class learnFragment : Fragment() {
     private fun prevCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>,
                          stack: MutableList<Int>) {
-        if (stack.size >= 1) {
+        if (stack.isNotEmpty()) {
             val idx = stack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
 //                card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
 //                showArray(stack)
-        } else if (stack.isEmpty()) {
+        } else {
             println("Not allowed")
         }
     }
