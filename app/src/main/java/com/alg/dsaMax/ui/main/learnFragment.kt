@@ -46,7 +46,7 @@ class learnFragment : Fragment() {
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
 
-        stack += rand
+        stack.add(rand)
 //        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
 //        showArray(stack)
 
@@ -75,7 +75,7 @@ class learnFragment : Fragment() {
 
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
-        stack += rand
+        stack.add(rand)
         card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
 //        showArray(stack)
     }
