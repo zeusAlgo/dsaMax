@@ -53,8 +53,7 @@ class learnFragment : Fragment() {
         cardTv.text = hashmap[key]!![0].toString()
 
         keyStack.add(key)
-//        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
-//        showArray(stack)
+        
         card.setOnClickListener { flipCard(cardTv, card, hashmap, key) }
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
