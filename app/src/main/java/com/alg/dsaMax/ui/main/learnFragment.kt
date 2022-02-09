@@ -77,7 +77,7 @@ class learnFragment : Fragment() {
             cardTv.text = hashmap[key]!![0].toString()
 
             toast(keyStack.toString())
-            card.setOnClickListener { flipCard(cardTv, card, hashmap, idx) }
+            card.setOnClickListener { flipCard(cardTv, card, hashmap, key) }
         }
 //        if (keyStack.size == 1) {
 //            toast("Not Allowed")
