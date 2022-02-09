@@ -47,7 +47,7 @@ class learnFragment : Fragment() {
         cardTv.text = hashmap[rand]!![0].toString()
 
         stack += rand
-        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
+//        Toast.makeText(context, stack.toString(), Toast.LENGTH_SHORT).show()
 //        showArray(stack)
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
