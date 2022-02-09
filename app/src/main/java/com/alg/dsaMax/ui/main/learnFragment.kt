@@ -69,15 +69,15 @@ class learnFragment : Fragment() {
 
     private fun prevCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>,
-                         stack: MutableList<Int>) {
-        if (stack.size == 1) {
+                         keyStack: MutableList<Int>) {
+        if (keyStack.size == 1) {
             toast("Not Allowed")
 
-        } else if (stack.size > 1){
-            val idx = stack.removeLast()
+        } else if (keyStack.size > 1){
+            val idx = keyStack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
 
-            toast(stack.toString())
+            toast(keyStack.toString())
             card.setOnClickListener { flipCard(cardTv, card, hashmap, idx) }
         } else {
             toast("Not Allowed")
