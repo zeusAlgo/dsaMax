@@ -50,7 +50,7 @@ class learnFragment : Fragment() {
                              + " subarray or desired value")
         hashmap[9] = arrayOf("Fast & Slow Pointers", "Hare and Tortoise Algorithm whereby"
                              + "one pointer is faster than the other slow pointer.")
-        hashmap[10] = arrayOf()
+        hashmap[10] = arrayOf("Merge Intervals", "Produce mutually exclusive intervals")
         // TODO: ADD REMAINING STRATS
 
         val key = randomInt(hashmap)
