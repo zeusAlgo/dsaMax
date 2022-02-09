@@ -56,6 +56,7 @@ class learnFragment : Fragment() {
             //TODO: CREATE STACK TO POP AND PUSH
             val idx = stack.removeLast()
             cardTv.text = hashmap[idx]!![0].toString()
+            card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
         }
     }
 
@@ -67,9 +68,7 @@ class learnFragment : Fragment() {
                          hashmap: HashMap<Int, Array<Any>>) {
         val rand = randomInt(hashmap)
         cardTv.text = hashmap[rand]!![0].toString()
-        card.setOnClickListener {
-            flipCard(cardTv, card, hashmap, rand)
-        }
+        card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
     }
 
     private fun flipCard(cardTv: TextView, card: View,
