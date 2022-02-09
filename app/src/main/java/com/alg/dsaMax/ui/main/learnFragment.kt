@@ -63,7 +63,7 @@ class learnFragment : Fragment() {
         @JvmStatic fun newInstance() = learnFragment()
     }
 
-    fun nextCard(tv: TextView, view2: View, hashmap: HashMap<Int, Array<Any>>,) {
+    private fun nextCard(tv: TextView, view2: View, hashmap: HashMap<Int, Array<Any>>,) {
         var rand = Random.nextInt(0, 4)
         tv.text = hashmap[rand]!![0].toString()
         view2.setOnClickListener {
