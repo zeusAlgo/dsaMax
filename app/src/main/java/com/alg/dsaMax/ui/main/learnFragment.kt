@@ -39,7 +39,7 @@ class learnFragment : Fragment() {
         hashmap[4] = arrayOf("Two Pointers", " Dual Pointers to iterate through" +
                 "a data structure until a certain condition is met")
 
-        // TODO: ADD REMAINING STRAITS
+        // TODO: ADD REMAINING STRATS
         val stack = emptyArray<Int>()
 
         val nxtBtn = view.findViewById<Button>(R.id.nxtBtn)
