@@ -107,10 +107,12 @@ class learnFragment : Fragment() {
     }
 
     private fun genDistinctCard(hashmap: HashMap<Int, Array<Any>>,
-                                keyStack: MutableList<Int>) : Int {
+                                keyStack: MutableList<Int>): Int {
         val rand = randomInt(hashmap)
         if (rand == keyStack.last()) {
             genDistinctCard(hashmap, keyStack)
+        } else {
+            return rand
         }
         return rand
     }
