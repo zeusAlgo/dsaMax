@@ -66,8 +66,6 @@ class learnFragment : Fragment() {
         prevBtn.setOnClickListener { prevCard(cardTv, card, hashmap, keyStack) }
     }
 
-    companion object { @JvmStatic fun newInstance() = learnFragment() }
-
     private fun prevCard(cardTv: TextView, card: View,
                          hashmap: HashMap<Int, Array<Any>>,
                          keyStack: MutableList<Int>) {
@@ -102,6 +100,7 @@ class learnFragment : Fragment() {
             cardTv.text = txA.toString()
         }
     }
+    
     private fun randomInt(hashmap: HashMap<Int, Array<Any>>) : Int {
         return Random.nextInt(0, hashmap.size)
     }
@@ -115,6 +114,8 @@ class learnFragment : Fragment() {
             return key
         }
     }
+
+    companion object { @JvmStatic fun newInstance() = learnFragment() }
 
     private fun toast(message: String) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
