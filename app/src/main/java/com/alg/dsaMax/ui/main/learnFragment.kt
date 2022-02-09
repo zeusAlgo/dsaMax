@@ -78,7 +78,7 @@ class learnFragment : Fragment() {
             cardTv.text = hashmap[idx]!![0].toString()
             toast(stack.toString())
 
-//                card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
+            card.setOnClickListener { flipCard(cardTv, card, hashmap, idx) }
 //                showArray(stack)
         } else {
             toast("Not Allowed")
@@ -93,6 +93,7 @@ class learnFragment : Fragment() {
         stack.add(rand)
 
         toast(stack.toString())
+        card.setOnClickListener { flipCard(cardTv, card, hashmap, rand) }
 //        showArray(stack)
     }
 
